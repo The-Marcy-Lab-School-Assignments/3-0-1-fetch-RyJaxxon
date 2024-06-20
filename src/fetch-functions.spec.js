@@ -1,3 +1,4 @@
+// const userURL = `https://jsonplaceholder.typicode.com/users`
 import { describe, it, expect, afterEach, afterAll, beforeEach, vi } from 'vitest';
 
 import {
