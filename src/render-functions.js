@@ -16,7 +16,7 @@ export const setupPageBasics = (parentEl) => {
         <input type='text' id='username' name='username' />
         <label for='email'>Email:</label>
         <input type='email' id='email' name='email' />
-        <button>Submit</button>
+        <button id='submit'>Submit</button>
       </form>
       <div id='new-user'></div>
     `;

@@ -3,7 +3,7 @@ const userURL = `https://jsonplaceholder.typicode.com/users`
 export const checkResponseStatus = () => {
     return fetch(userURL)
         .then((response) => {
-            console.log({ok : response.ok , status: response.status, url : response.url })
+            // console.log({ok : response.ok , status: response.status, url : response.url })
             return {ok : response.ok , status: response.status, url : response.url };
         })
 };
@@ -20,7 +20,7 @@ export const getUsers = () => {
 export const getUserPosts = (userID, maxNumPosts = 3) => {
     return fetch (`${userURL}/${userID}/posts`)
         .then((response) => response.json())
-        .then((posts) => console.log(posts.slice(0,maxNumPosts)))
+        .then((posts) => posts.slice(0,maxNumPosts))
 };
 
 
