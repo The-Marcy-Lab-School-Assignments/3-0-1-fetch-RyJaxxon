@@ -28,12 +28,8 @@ export default function app(appDiv) {
   });
   newUserForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const newUserData = {
-      username : document.querySelector("#username").value,
-      email : document.querySelector("#email").value
-    }
-    document.querySelector("#email").value = ''
-    document.querySelector("#username").value = ''
-    createNewUser(newUserData).then((res) => renderNewUser(newUserDiv, res))
+    const formData = new FormData(e.target)
+    const formObject = Object.fromEntries(formData);
+    renderNewUser(newUserDiv,formObject)
   })
 }
