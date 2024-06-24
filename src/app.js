@@ -14,6 +14,7 @@ import {
 const userURL = `https://jsonplaceholder.typicode.com/users`
 
 export default function app(appDiv) {
+  /** FEEDBACK: Great job getting all test cases to pass! */
   const { statusDiv, usersUl, postsUl, newUserForm, newUserDiv } = setupPageBasics(appDiv);
   checkResponseStatus().then((statusInfoObj) => renderStatus(statusDiv, statusInfoObj));
   getUsers().then((users) => renderUsers(usersUl, users))
